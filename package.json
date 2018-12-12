@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "budo main.js --open --live"
+  },
+  "dependencies": {
+    "budo": "^11.5.0",
+    "gl-matrix": "^2.8.1"
+  }
+}
