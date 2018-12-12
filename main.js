@@ -21,7 +21,7 @@ canvas.onmousedown = function (e) {
 }
 canvas.onmousemove = function (e) {
   if (isDragging) {
-    xRotation += (e.pageY - lastMouseY) / 60
+    xRotation -= (e.pageY - lastMouseY) / 60
     yRotation -= (e.pageX - lastMouseX) / 60
     lastMouseX = e.pageX
     lastMouseY = e.pageY
@@ -235,7 +235,7 @@ function createCamera () {
 
   let xAxisRotation = math.create()
   let yAxisRotation = math.create()
-  math.rotateX(xAxisRotation, xAxisRotation, -xRotation)
+  math.rotateX(xAxisRotation, xAxisRotation, xRotation)
   math.rotateY(yAxisRotation, yAxisRotation, yRotation)
   math.multiply(camera, xAxisRotation, camera)
   math.multiply(camera, yAxisRotation, camera)
